@@ -1,0 +1,27 @@
+.form{
+    width: 500px;
+    margin: 30px auto;
+}
+.form label{
+    display: block;
+    padding: 5px 0;
+    overflow: hidden;
+    zoom:1;
+}
+.form label span{
+    float: left;
+    width: 100px;
+    text-align: right;
+}
+.fm-btn{
+    display: block;
+    width: 85px;
+    height: 27px;
+    line-height: 27px;
+    background-color: #4276A8;
+    border: 1px solid #0E538C;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px 0 10px 130px;
+}

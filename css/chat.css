@@ -1,0 +1,245 @@
+@charset "utf-8";body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,pre,code,form,fieldset,button,input,textarea,p,address,em,label,img,th,td,iframe,sub,sup {
+    padding: 0;
+    margin: 0
+}
+body {
+    color: #000;
+    font-family: "宋体",Arial,"\5B8B\4F53",Helvetica,sans-serif;
+    font-size: 12px
+}
+h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ol,ul,li {
+    margin: 0;
+    padding: 0
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%
+}
+ol,ul {
+    list-style: none
+}
+img {
+    border: 0;
+    display: inline-block
+}
+input,select,input,textarea {
+    font-size: 12px;
+    outline: 0
+}
+select,input {
+    vertical-align: middle
+}
+input[type="reset"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="file"]>input[type="button"]::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+textarea {
+    resize: none
+}
+fieldset {
+    border: 0
+}
+address,caption,th,cite,code,em {
+    font-style: normal;
+    font-weight: normal
+}
+a:link,a:visited,a:active {
+    color: #0041d9;
+    text-decoration: none;
+    outline: 0
+}
+a:hover {
+    color: #f60;
+    text-decoration: underline;
+    outline: 0
+}
+.chatBox{
+    overflow: hidden;
+    zoom:1;
+    width: 730px;
+    height: auto;
+    margin: 50px auto;
+    border: 1px #666 solid;
+}
+.chatLeft{
+    float: left;
+    width: 562px;
+    height: auto;
+    border-right: 1px #bebebe solid;
+}
+.chatRight{
+    float: right;
+    overflow-y: auto;
+    width: 166px;
+    height: 416px;
+}
+.chat01-title{
+    height: 30px;
+    line-height: 30px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    zoom:1;
+}
+.talkTo{
+    float: left;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.close-btn{
+    float: right;
+    padding: 0 15px;
+    color: #999;
+    font-weight: bold;
+    cursor: pointer;
+}
+.chat02-title{
+    height: 25px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+}
+.chat02-bar{
+    padding:4px 5px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #ccc;
+    overflow: hidden;
+    zoom:1;
+}
+.send-btn{
+    display: block;
+    float: right;
+    width: 85px;
+    height: 27px;
+    line-height: 27px;
+    background-color: #4276A8;
+    border: 1px solid #0E538C;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.chat01-content{
+    overflow-x: none;
+    overflow-y: auto;
+    height: 220px;
+}
+.chat02-content{
+    height: auto;
+}
+.chat03-title{
+    height: 30px;
+    line-height: 30px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.chat03-content{
+    font-size: 12px;
+    margin: 8px 0;
+    text-align: left;
+    color: #333;
+}
+.chat02-content textarea{
+    display: block;
+    overflow-y: auto;
+    width: 552px;
+    height: 96px;
+    padding: 5px;
+    border: medium none;
+}
+.chat03-content li{
+    overflow: hidden;
+    zoom:1;
+    padding: 3px 6px;
+    cursor: pointer;
+}
+.chat03-content .hover{
+    background: #ebeef3;
+}
+.chat03-content .choosed{
+    background: #ebeef3;
+}
+.chat03-content ul img{
+    width: 30px;
+    height: 30px;
+}
+.message-box{
+    display: none;
+}
+.message{
+    overflow: hidden;
+    zoom:1;
+    margin: 0 10px;
+    padding: 10px 10px 10px 0;
+}
+.user-time{
+    margin-bottom: 5px;
+    text-align: center;
+}
+.user-logo{
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.me .user-logo{
+    float: right;
+}
+.wrap-text{
+    position: relative;
+    float: left;
+    width: 360px;
+    height: auto;
+    margin: 5px 0 0 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    background-color: #BEE664;
+    border:1px solid #92C221;
+    border-radius: 5px;
+    padding: 8px 5px;
+    line-height: 18px;
+}
+.wrap-text:after{
+    display: block;
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 15px;
+    background: url('../img/arrow.png') no-repeat 0 -14px;
+    left: -10px;
+    top: 10px;
+    z-index: 1;
+}
+.me .wrap-text{
+    float: right;
+    margin: 5px 10px 0 0;
+    background-color: #EFEFEF;
+    border: 1px solid #D9D9D9;
+}
+.me .wrap-text:after{
+    background: url('../img/arrow.png') no-repeat 0 0;
+    left: 370px;
+}
+.person-box{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.person-name{
+    float: left;
+    padding: 8px 0 0 5px;
+}
+.person-box label{
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #fff;
+}
+.online{
+    background-color: #38bc00;
+}
+.offline{
+    background-color: #ccc;
+}

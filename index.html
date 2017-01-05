@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在线客服对话框</title>
+<link rel="stylesheet" type="text/css" href="css/chat.css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<!-- <script type="text/javascript" src="js/socket.io.min.js"></script>
+ --><script type="text/javascript" src="js/jmessage-sdk-web-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/chat.js"></script>
+</head>
+<body>
+    <div class="chatBox">
+        <div class="chatLeft">
+            <div class="chat01-title">
+                <span class="talkTo">刘秀</span>
+                <em class="close-btn">╳</em>
+            </div>
+            <div class="chat01-content">
+                <div class="message-box" data-id="0" style="display: block;">
+                </div>
+                <div class="message-box" data-id="1">
+                </div>
+            </div>
+            <div class="chat02-title">
+            </div>
+            <div class="chat02-content">
+                <textarea id="textarea"></textarea>
+            </div>
+            <div class="chat02-bar">
+                <span class="send-btn">发送</span>
+            </div>
+        </div>
+        <div class="chatRight">
+            <div class="chat03-title">成员列表</div>
+            <div class="chat03-content">
+                <ul>
+                    <li class="person choosed" data-id="0">
+                        <div class="person-box">
+                           <img src="img/head/2013.jpg">
+                           <label class="online"></label> 
+                        </div>
+                        <p class="person-name">刘秀</p>
+                    </li>
+                    <li class="person" data-id="1">
+                        <div class="person-box">
+                           <img src="img/head/2014.jpg">
+                           <label class="offline"></label> 
+                        </div>
+                        <p class="person-name">陈诚</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

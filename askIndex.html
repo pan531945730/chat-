@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>在线用户对话框</title>
+<link rel="stylesheet" type="text/css" href="css/askChat.css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<!-- <script type="text/javascript" src="js/socket.io.min.js"></script>
+ --><script type="text/javascript" src="js/jmessage-sdk-web-2.1.0.min.js"></script>
+<script type="text/javascript" src="js/askChat.js"></script>
+</head>
+<body>
+    <div class="chatBox">
+        <div class="chatLeft">
+            <div class="chat01-title">
+                <span class="talkTo">94客服</span>
+                <em class="close-btn">╳</em>
+            </div>
+            <div class="chat01-content">
+                <div class="message-box" data-id="0" style="display: block;">
+                </div>
+                <div class="message-box" data-id="1">
+                </div>
+            </div>
+            <div class="chat02-title">
+            </div>
+            <div class="chat02-content">
+                <textarea id="textarea"></textarea>
+            </div>
+            <div class="chat02-bar">
+                <span class="send-btn">发送</span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="btn-class" ng-controller="demoCtrl">
+        <p>注册/登陆:</p>
+        <button type="button" id='register'>注册</button>
+        <button type="button" id='logins'>登录</button>
+        <button type="button" id='sendmsg'>发送消息</button>
+    </div>
+    <script type="text/javascript">
+    $(function () {
+        //登录在线客服
+        $("#logins").click(function () {
+            
+        });
+
+
+
+             var JIM = new JMessage();
+             JIM.init({
+                 "appkey": "25b693b31d2c2ad5f072ef0c",
+                 "random_str": "022cd9fd995849b58b3ef0e943421ed9",
+                 "signature": "D97C2DDA3E46E5E6D482E9E8EE84AF93",
+                 "timestamp": "1467967210887"
+             }).onSuccess(function (data) {
+
+                JIM.login({
+                    'username': 'liuxiu',
+                    'password': '123456'
+                }).onSuccess(function (data) {
+                    // do something
+                    console.log('login suc');
+                }).onAck(function (data) {
+                    console.log(data);
+                }).onFail(function (data) {
+                    // do something
+                    console.log('fail');
+                });
+                 //do something
+             }).onFail(function (data) {
+                 // do something
+             }).onTimeout(function(data){
+                if (data.response_timeout) {
+                    // do something when response timeout
+                } else {
+                    // do something when request timeout
+                }
+             });
+
+             $("#sendmsg").click(function () {
+                 JIM.sendSingleMsg({
+                     'target_username': '94service',
+                     'content': '您好我是刘秀'
+                 }).onSuccess(function (data, msg) {
+                     // do something
+                     console.log(msg);
+                 }).onFail(function (data) {
+                     // do something
+                     console.log('fail');
+                 });
+             });
+
+             $("#register").click(function () {
+                 JIM.register({
+                     'username': '18017740228',
+                     'password': '123456',
+                      'nickname': '18017740228用户'
+                 }).onSuccess(function (data) {
+                     //do somethins
+                     console.log("register success");
+                 }).onFail(function (data) {
+                     // do something
+                     console.log("register fail");
+                 }).onTimeout(function(data){
+                    if (data.response_timeout) {
+                        // do something when response timeout
+                        alert('timeout-if');
+                    } else {
+                        // do something when request timeout
+                        alert('timeout-else');
+                    }
+                 });
+             });
+
+             
+
+         })
+    </script>
+
+</body>
+</html>
